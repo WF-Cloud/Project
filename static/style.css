@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 420px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.app-header {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+}
+
+.app-header p {
+    font-size: 0.8rem;
+    color: rgb(158, 158, 167);
+}
+
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+}
+
+.message.bot {
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.chat-input button {
+    margin-left: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #51b1ac;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
