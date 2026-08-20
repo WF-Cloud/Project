@@ -12,14 +12,27 @@ function addMessage(text, who) {
 function sendMessage() {
     var text = messageInput.value;
 
-    if (text.trim() === "") {
+    if (text.trim === "") {
         return;
     }
 
+    // show user their message box
     addMessage(text, "user");
     messageInput.value = "";
 
-    addMessage("I hear you! We will connect this to flask next.", "bot");
+    fetch("/chat", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({message: text})
+    })
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        addMessage(data.reply, "bot");
+    });
 }
 
 sendButton.onclick = sendMessage;
