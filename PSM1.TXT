@@ -1,0 +1,10 @@
+What to talk about in Presentation:
+1. How LLM functions
+2. How RAG functions
+3. Explain model architecture
+4. Compare models and how they differ, including diff version from each provider
+5. n8n will be added in FYP2 for workflow automation (unanswered questions, FAQ)
+6. file conversion from pdf to markdown
+
+Suggested Improvements:
+1. Automate data prep by integrating n8n
