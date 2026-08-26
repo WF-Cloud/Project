@@ -1,0 +1,3 @@
+1. tried using markitdown, unclean extraction. Resulting in very janky tables
+2. attempting docling usage, build wheel error
+3. resolved to using PyMuPDF4LLM, success!
