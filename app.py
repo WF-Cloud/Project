@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, jsonify
+from retriever import retrieve_documents
+from llm.gemini import generate_answer
 
 app = Flask(__name__)
 
@@ -11,7 +13,16 @@ def chat():
     data = request.get_json()
     user_message = data.get("message", "")
 
-    reply = f"you said: {user_message}"
+    documents = retrieve_documents(user_message)
+
+    context = "\n\n".join(
+        [doc.page_content for doc in documents]
+    )
+    
+    reply = generate_answer(
+        user_message,
+        context
+    )
 
     return jsonify({"reply": reply})
 

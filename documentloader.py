@@ -1,9 +1,20 @@
-from langchain_community.document_loaders import DirectoryLoader
+from pathlib import Path
+from langchain_community.document_loaders import TextLoader
 
-DATA_PATH = "Knowledge/"
+DATA_PATH = Path("Knowledge/")
+
 
 def load_documents():
-    loader = DirectoryLoader(DATA_PATH, glob="*.md")
-    documents = loader.load()
-    return documents
 
+    documents = []
+
+    for md_file in DATA_PATH.glob("*.md"):
+
+        loader = TextLoader(
+            str(md_file),
+            encoding="utf-8"
+        )
+
+        documents.extend(loader.load())
+
+    return documents
