@@ -1,12 +1,14 @@
 import os
-from openai import OpenAI
+from dotenv import load_dotenv
+from google import genai
+GEMINI_MODEL = "gemini-3.7-flash"
 
-OPENAI_MODEL = "gpt-5"
+load_dotenv()
 
-client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY")
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
 )
-
+print("Gemini client created!")
 
 def generate_answer(question, context):
 
@@ -27,9 +29,9 @@ Question:
 Answer:
 """
 
-    response = client.responses.create(
-        model=OPENAI_MODEL,
-        input=prompt
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=prompt
     )
 
-    return response.output_text
+    return response.text

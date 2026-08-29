@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from retriever import retrieve_documents
-from llm.gemini import generate_answer
+#from llm.gemini_llm import generate_answer
+from llm.groq_llm import generate_answer
+#from llm.openai_llm import generate_answer
 
 app = Flask(__name__)
 
