@@ -1,0 +1,13 @@
+This is a step-by-step guide to operate the chatbot's backend
+Before anything, load .pdf documents into "Knowledge" folder
+
+Run the following python files in this order:
+1. documentloader.py
+2. convert.py 
+3. chunker.py
+4. chroma.py
+5. retriever.py
+
+The following is the explanation for each file:
+
+documentloader.py:

@@ -1,19 +1,20 @@
 import pymupdf4llm
 from pathlib import Path
 
-DATA_PATH = Path("Knowledge")
+PDF_FILE = Path("Knowledge/peraturan_akademik_010126.pdf")
 
 def convert_pdf():
-    for pdf_file in DATA_PATH.glob("*.pdf"):
-        print(f"Converting {pdf_file} to markdown...")
+    print(f"Converting {PDF_FILE} to markdown...")
 
-        markdown = pymupdf4llm.to_markdown(pdf_file)
+    markdown = pymupdf4llm.to_markdown(PDF_FILE)
 
-        output_file = pdf_file.with_suffix(".md")
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(markdown)
+    output_file = PDF_FILE.with_suffix(".md")
 
-        print(f"Saved markdown to {output_file.name}")
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(markdown)
+
+    print(f"Saved markdown to {output_file.name}")
+
 
 if __name__ == "__main__":
     convert_pdf()
