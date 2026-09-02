@@ -8,6 +8,4 @@ Run the following python files in this order:
 4. chroma.py
 5. retriever.py
 
-The following is the explanation for each file:
-
-documentloader.py:
+ALWAYS RUN CHROMA.PY BEFORE APP.PY TO REBUILD DATABASE!!!

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "category": "fees",
+        "question": "How much is the health examination fee?",
+        "expected_answer": "RM80.00"
+    },
+    {
+        "id": 2,
+        "category": "registration",
+        "question": "When does registration for new students take place?",
+        "expected_answer": "21 and 22 September 2026"
+    },
+    {
+        "id": 3,
+        "category": "health",
+        "question": "What should students bring when attending the health examination?",
+        "expected_answer": "Students should bring their identification card and payment receipt."
+    },
+    {
+        "id": 4,
+        "category": "procedure",
+        "question": "When can students complete the health declaration?",
+        "expected_answer": "After their student status has been activated online by UTeM following new student registration."
+    },
+    {
+        "id": 5,
+        "category": "accommodation",
+        "question": "Where does residential college registration take place?",
+        "expected_answer": "The registration location depends on the faculty and is held at Dewan Canselor or Dewan Sukan."
+    },
+    {
+        "id": 6,
+        "category": "unanswerable",
+        "question": "What is the price of food at the UTeM cafeteria?",
+        "expected_answer": "The provided documents do not contain enough information to answer this question."
+    }
+]

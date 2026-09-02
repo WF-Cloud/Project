@@ -1,8 +1,10 @@
+
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-
-CHROMA_PATH = "chroma_db"
+print(">>> RETRIEVER.PY LOADED")
+CHROMA_PATH = "chroma"
+COLLECTION_NAME = "utem_documents"
 
 embedding = HuggingFaceEmbeddings(
     model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
@@ -11,7 +13,8 @@ embedding = HuggingFaceEmbeddings(
 
 db = Chroma(
     persist_directory=CHROMA_PATH,
-    embedding_function=embedding
+    embedding_function=embedding,
+    collection_name=COLLECTION_NAME
 )
 
 

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "category": "fees",
+        "question": "How much is the registration fee?",
+        "expected_answer": "RM2220.00"
+    },
+    {
+        "id": 2,
+        "category": "registration",
+        "question": "When is the registration date?",
+        "expected_answer": "21 and 22 September 2026"
+    },
+    {
+        "id": 3,
+        "category": "fees",
+        "question": "How much is the co-curricular fee?",
+        "expected_answer": "RM200"
+    },
+    {
+        "id": 4,
+        "category": "application",
+        "question": "What is the maximum age to apply for PTPTN?",
+        "expected_answer": "45 years old."
+    },
+    {
+        "id": 5,
+        "category": "phone number",
+        "question": "What is the phone number for Philea Resort & Spa?",
+        "expected_answer": "06-2333399"
+    },
+    {
+        "id": 6,
+        "category": "unanswerable",
+        "question": "What is the price of food at the UTeM cafeteria?",
+        "expected_answer": "The provided documents do not contain enough information to answer this question."
+    },
+    {
+        "id": 7,
+        "category": "fees",
+        "question": "How much is the health examination fee?",
+        "expected_answer": "RM80.00"
+    },
+    {
+        "id": 8,
+        "category": "unanswerable",
+        "question": "What is the population of Mars?",
+        "expected_answer": "The provided documents do not contain enough information to answer this question."
+    }
+]

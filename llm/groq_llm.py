@@ -30,8 +30,7 @@ Rules:
 - Do not include source text, page numbers, or document formatting unless requested.
 - Use bullet points only when they make the answer clearer.
 - If the context does not contain enough information, say: "I don't have enough information in the provided UTeM documents to answer that."
-- Do not make up or assume information.
-- If referring to a specific table, include the page number in which the table is found.
+
 
 Context:
 {context}

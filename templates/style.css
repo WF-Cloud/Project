@@ -42,7 +42,7 @@ body {
     text-align: left;
     font-weight: bold;
     color: white;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .new-chat-btn {
@@ -57,7 +57,6 @@ body {
     cursor: pointer;
     width: 100%;
     font-size: 15px;
-    margin-left: 7px;
 }
 
 .new-chat-btn:hover {
@@ -65,23 +64,22 @@ body {
 }
 
 .history {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .history h3 {
     font-size: 1rem;
     margin-bottom: 5px;
     color: rgb(158, 158, 167);
-    padding-left: 10px;
 }
 
 .history-item {
     width: 100%;
-    padding: 5px 5px 10px 10px;
+    padding: 10px 12px;
 
     background-color: transparent;
     color: white;
@@ -94,15 +92,12 @@ body {
 
     font-size: 14px;
 
+    /* Prevent long titles from overflowing */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
     transition: background-color 0.2s ease;
-}
-
-.history-item:hover {
-    background-color: #0f2027;
 }
 
 .chat-container {

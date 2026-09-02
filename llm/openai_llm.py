@@ -4,7 +4,7 @@ from openai import OpenAI
 OPENAI_MODEL = "gpt-5"
 
 client = OpenAI(
-    api_key=os.environ.get("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")
+    api_key=os.environ.get("OPENAI_API_KEY")
 )
 
 

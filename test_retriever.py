@@ -1,17 +1,44 @@
-from retriever import retrieve_documents
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 
+CHROMA_PATH = "chroma"
+COLLECTION_NAME = "utem_documents"
 
-question = "How much is the registration fee for new students?"
+# Load the same embedding model used when creating ChromaDB
+embedding = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+)
 
-results = retrieve_documents(question)
+# Load ChromaDB
+db = Chroma(
+    persist_directory=CHROMA_PATH,
+    embedding_function=embedding,
+    collection_name=COLLECTION_NAME
+)
 
+question = "What is the registration date for new students?"
+
+results = db.similarity_search(question, k=5)
+
+print("\n")
+print("=" * 80)
+print("RETRIEVAL TEST")
+print("=" * 80)
+
+print(f"\nQuestion: {question}")
+print(f"Number of results: {len(results)}")
 
 for i, document in enumerate(results):
 
-    print(f"\n--- Result {i + 1} ---")
+    print("\n" + "-" * 80)
+    print(f"RESULT {i + 1}")
+    print("-" * 80)
 
-    print("Source:")
-    print(document.metadata)
+    print("\nSOURCE:")
+    print(document.metadata.get("source"))
 
-    print("\nContent:")
-    print(document.page_content)
+    print("\nPAGE:")
+    print(document.metadata.get("page"))
+
+    print("\nCONTENT:")
+    print(document.page_content[:1500])
